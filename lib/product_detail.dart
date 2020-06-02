@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:projeto_1/assets/style/styles.dart';
 import 'package:projeto_1/widgets/circular_button.dart';
 import 'package:projeto_1/widgets/product_color_selector.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
@@ -30,7 +31,7 @@ class _ProductDetailState extends State<ProductDetail> {
 
 
     return Scaffold(
-      backgroundColor: Color(0xFFF9F9F7),
+      backgroundColor: colorBG,
 
       body: Stack(
         children: <Widget>[
@@ -42,39 +43,46 @@ class _ProductDetailState extends State<ProductDetail> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                 children: <Widget>[
+
                   IconButton(
-                    icon: Icon(Icons.arrow_back),
+                    icon: iconBack,
                     color: Colors.black,
                     onPressed: (){}
                   ),
+
                   IconButton(
-                    icon: Icon(Icons.share),
+                    icon: iconShare,
                     color: Colors.black,
                     onPressed: (){}
                   )
+
                 ],
               ),
 
             ),
 
           Padding(
-            padding: const EdgeInsets.only(bottom: 30),
+            padding: const EdgeInsets.only(bottom: 20),
+
             child: Center(
               child: Image.asset(
-                "lib/assets/model.jpg",
+                "lib/assets/img/model.png",
                 width: double.infinity,
-                height: height * .7,
+                height: height * .8,
               ),
             ),
+            
           ),
 
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
+
                 colors: [
-                  Color(0xffdad9d5),
-                  Color(0xffdcd9d2).withOpacity(.2)
+                  colorGD0,
+                  colorGD1.withOpacity(.2)
                 ],
+
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter,
                 stops:  [ 0.0, 0.5 ],
@@ -94,9 +102,12 @@ class _ProductDetailState extends State<ProductDetail> {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 height:  ScreenUtil().setHeight(580),
+
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+
                   children: <Widget> [
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
@@ -107,11 +118,8 @@ class _ProductDetailState extends State<ProductDetail> {
                             maxWidth: ScreenUtil().setWidth(400),
                           ),
                           child: Text(
-                            "Vestido Preto",
-                            style: GoogleFonts.montserrat(
-                              fontSize: ScreenUtil().setSp(54),
-                              fontWeight: FontWeight.w700,
-                            )
+                            "Blusa Azul",
+                            style: textH2,
                           ),
                         ),
 
@@ -123,28 +131,23 @@ class _ProductDetailState extends State<ProductDetail> {
                             CustomPaint(
                               painter: LinePainter(),
                               child: Text(
-                                '\$239',
-                                style: GoogleFonts.montserrat(
-                                  fontSize: ScreenUtil().setSp(34),
-                                  fontWeight: FontWeight.w700,
-                                ),
+                                '\$ 239',
+                                style: textH5
                               ),
                             ),
 
                             SizedBox(height : 12),
 
                             Text(
-                              '\$208.99',
-                              style: GoogleFonts.montserrat(
-                                fontSize: ScreenUtil().setSp(36),
-                                fontWeight: FontWeight.w700,
-                              ),
+                              '\$ 199.99',
+                              style: textH4
                             ),
 
                           ],
                         )
 
                       ]
+
                     ),
                     
                     SizedBox( height: ScreenUtil().setHeight(14) ),
@@ -165,28 +168,25 @@ class _ProductDetailState extends State<ProductDetail> {
 
                     Text(
                       "Color",
-                      style: GoogleFonts.montserrat(
-                        fontSize: ScreenUtil().setSp(36),
-                        fontWeight: FontWeight.w700
-                      ),
+                      style: textH4
                     ),
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
                       children: [
+
                         ColorSelector(
                           colors: [
-                            Color(0xff201e1f),
+                            Color(0xff122057),
                             Color(0xff919191),
                             Color(0xffe3d4bf),
                           ],
                         ),
+
                         CircularButton(
                           color: Colors.white,
-                          icon: Icon(
-                            Icons.favorite,
-                            color: Colors.red,
-                          ),
+                          icon: iconLike,
                           onPressed: () {},
                         )
                       ]
@@ -194,26 +194,26 @@ class _ProductDetailState extends State<ProductDetail> {
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
                       children: <Widget>[
+
                         ConstrainedBox(
                           constraints: BoxConstraints(
                             maxWidth: ScreenUtil().setWidth(460)
                           ),
+
                           child: Text(
                             desc,
-                            style: GoogleFonts.montserrat(
-                              fontSize: ScreenUtil().setSp(30),
-                            ),
+                            style: textP
                           ),
                         ),
+
                         CircularButton(
                           color: Colors.black,
-                          icon: Icon(
-                            Icons.shopping_cart,
-                            color: Colors.white
-                          ),
+                          icon: iconShopping,
                           onPressed: () {},
                         )
+                        
                       ],
                     )
                     
