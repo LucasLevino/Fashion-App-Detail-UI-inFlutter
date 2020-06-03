@@ -1,16 +1,7 @@
-# projeto_1
+# projeto_1/3 week 1
+Fashion App Detail UI in Flutter
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Android
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/19260371/83466681-d6b36080-a445-11ea-9d7b-337e304029ea.jpeg">
+</p>
