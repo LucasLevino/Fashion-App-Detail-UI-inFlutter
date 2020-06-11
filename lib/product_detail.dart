@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:projeto_1/assets/style/styles.dart';
 import 'package:projeto_1/widgets/circular_button.dart';
 import 'package:projeto_1/widgets/product_color_selector.dart';
@@ -131,7 +130,7 @@ class _ProductDetailState extends State<ProductDetail> {
                             CustomPaint(
                               painter: LinePainter(),
                               child: Text(
-                                '\$ 239',
+                                'R\$ 239,99',
                                 style: textH5
                               ),
                             ),
@@ -139,7 +138,7 @@ class _ProductDetailState extends State<ProductDetail> {
                             SizedBox(height : 12),
 
                             Text(
-                              '\$ 199.99',
+                              'R\$ 199,99',
                               style: textH4
                             ),
 
@@ -167,7 +166,7 @@ class _ProductDetailState extends State<ProductDetail> {
                     ),
 
                     Text(
-                      "Color",
+                      "Cores",
                       style: textH4
                     ),
 
